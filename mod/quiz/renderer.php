@@ -573,7 +573,7 @@ class mod_quiz_renderer extends plugin_renderer_base {
             $this->page->requires->js_call_amd('core_form/submit', 'init', ['mod_quiz-prev-nav']);
         }
         if ($lastpage) {
-            $nextlabel = get_string('endtest', 'quiz');
+            $nextlabel = 'Submit';
         } else {
             $nextlabel = get_string('navigatenext', 'quiz');
         }

@@ -43,8 +43,10 @@ class renderer extends \plugin_renderer_base {
     public function render_tree(tree $tree) {
         $return = \html_writer::start_tag('div', array('class' => 'profile_tree'));
         $categories = $tree->categories;
-        foreach ($categories as $category) {
-            $return .= $this->render($category);
+	foreach ($categories as $category) {
+	    if($category->name != 'privacyandpolicies' && $category->name != 'loginactivity' ) {
+                $return .= $this->render($category);
+            }
         }
         $return .= \html_writer::end_tag('div');
         return $return;
@@ -67,8 +69,9 @@ class renderer extends \plugin_renderer_base {
             $return = \html_writer::start_tag('section',
                 array('class' => 'node_category card d-inline-block w-100 mb-3' . $classes));
             $return .= \html_writer::start_tag('div', array('class' => 'card-body'));
-        }
-        $return .= \html_writer::tag('h3', $category->title, array('class' => 'lead'));
+	} 
+	
+	$return .= \html_writer::tag('h3', $category->title, array('class' => 'lead'));
         $nodes = $category->nodes;
         if (empty($nodes)) {
             // No nodes, nothing to render.
