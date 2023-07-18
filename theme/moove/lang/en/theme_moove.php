@@ -137,6 +137,7 @@ $string['whatsappdesc'] = 'Enter your whatsapp number for contact.';
 $string['telegram'] = 'Telegram';
 $string['telegramdesc'] = 'Enter your Telegram contact or group link.';
 $string['contactus'] = 'Contact us';
+$string['support'] = 'Support';
 $string['followus'] = 'Follow us';
 
 // Mypublic page.
