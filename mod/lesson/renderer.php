@@ -568,7 +568,6 @@ class mod_lesson_renderer extends plugin_renderer_base {
 
         if ($data->gradelesson) {
             // We are using level 3 header because the page title is a sub-heading of lesson title (MDL-30911).
-            $output .= $this->heading(get_string("congratulations", "lesson"), 3);
             $output .= $this->box_start('generalbox boxaligncenter');
         }
 
