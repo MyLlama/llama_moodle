@@ -5966,6 +5966,9 @@ function email_to_user($user, $from, $subject, $messagetext, $messagehtml = '', 
                        $usetrueaddress = true, $replyto = '', $replytoname = '', $wordwrapwidth = 79) {
 
     global $CFG, $PAGE, $SITE;
+        
+    $from = 'noreply@learn.myllama.co';
+    $replyto = 'noreply@learn.myllama.co';
 
     if (empty($user) or empty($user->id)) {
         debugging('Can not send email to null user', DEBUG_DEVELOPER);
