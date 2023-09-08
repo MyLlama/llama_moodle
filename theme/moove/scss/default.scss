@@ -19,7 +19,7 @@
 @import "moove/enrol";
 
 
-
+//This css is for report section cards UI 
 .report-card {
     height: 13vh;
     display: flex;
@@ -28,25 +28,27 @@
     text-align: center;
     box-shadow: rgba(247, 147, 17, 0.12) 0px 2px 4px 0px, rgba(247, 147, 17, 0.32) 0px 2px 16px 0px;
     transition: box-shadow 0.3s ease; 
-  }
+}
   
-  .report-card:hover {
+.report-card:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-      body.pagelayout-incourse #region-main a:not(.btn),body.pagelayout-incourse .section-navigation>a:not(.btn) {
-        text-decoration: none;
-        font-size:1.2rem;
-      }
-      #card-container{
-        display:grid;
-        grid-template-columns: repeat(3,1fr);
-        gap:30px;
-        width:100%;
-      }
+}
+
+body.pagelayout-incourse #region-main a:not(.btn),body.pagelayout-incourse .section-navigation>a:not(.btn) {
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+#card-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    width:100%;
+}
       
-      @media (max-width: 800px) {
-      #card-container{
-      display:grid;
-      grid-template-columns: repeat(1, 1fr);
-      }
-      }
+@media (max-width: 800px) {
+    #card-container{
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
