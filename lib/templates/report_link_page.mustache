@@ -39,13 +39,13 @@
 {{#node}}
 <div class="container-fluid">
     <div class="row">
-        <ul class="list-unstyled ml-0">
+        <div class="list-unstyled ml-0" id="card-container">
             {{#node.children}}
                 {{#display}}
-                    <li><a href="{{{action}}}">{{text}}</a></li>
+                    <div class="report-card" ><a href="{{{action}}}">{{text}}</a></div>
                 {{/display}}
             {{/node.children}}
-        </ul>
+        </div>
     </div>
 </div>
 {{/node}}
