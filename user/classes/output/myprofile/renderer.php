@@ -44,11 +44,11 @@ class renderer extends \plugin_renderer_base {
         $return = \html_writer::start_tag('div', array('class' => 'profile_tree'));
         $categories = $tree->categories;
 	foreach ($categories as $category) {
-	    if($category->name != 'privacyandpolicies' && $category->name != 'loginactivity' ) {
+	    if($category->name != 'privacyandpolicies' && $category->name != 'loginactivity' && $category->name != 'mobileapp' && $category->name != 'reports' ) {
                 $return .= $this->render($category);
             }
         }
-        $return .= \html_writer::end_tag('div');
+        $return .= \html_writer::end_tag('div');    
         return $return;
     }
 
