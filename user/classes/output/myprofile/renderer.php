@@ -44,7 +44,7 @@ class renderer extends \plugin_renderer_base {
         $return = \html_writer::start_tag('div', array('class' => 'profile_tree'));
         $categories = $tree->categories;
 	foreach ($categories as $category) {
-	    if($category->name != 'privacyandpolicies' && $category->name != 'loginactivity' && $category->name != 'reports' && $category->name != 'mobileapp' ) {
+	    if($category->name != 'privacyandpolicies' && $category->name != 'loginactivity' ) {
                 $return .= $this->render($category);
             }
         }
