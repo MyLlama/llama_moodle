@@ -48,7 +48,7 @@ class renderer extends \plugin_renderer_base {
                 $return .= $this->render($category);
             }
         }
-        $return .= \html_writer::end_tag('div');    
+        $return .= \html_writer::end_tag('div');
         return $return;
     }
 
