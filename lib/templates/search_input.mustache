@@ -37,6 +37,7 @@
         ]
     }
 }}
+{{! add an id searchbox to target this div using css  }}
 <div id="searchbox" class="simplesearchform {{ extraclasses }}">
     {{^inform}}
     <form autocomplete="off" action="{{ action }}" method="get" accept-charset="utf-8" class="mform form-inline simplesearchform">
@@ -58,6 +59,7 @@
            autocomplete="off"
            value="{{ query }}"
         >
+{{! add an id searchicon to target this div using css  }}
         <div id="searchicon" class="input-group-append">
             <button type="submit" class="btn {{^btnclass}}btn-submit{{/btnclass}} {{ btnclass }} search-icon">
                 {{#pix}} a/search, core {{/pix}}
