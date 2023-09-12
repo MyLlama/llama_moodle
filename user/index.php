@@ -280,7 +280,7 @@ $selectactionparams = array(
     'disabled' => 'disabled'
 );
 $label = html_writer::tag('label', get_string("withselectedusers"),
-        ['for' => 'formactionid', 'class' => 'col-form-label d-inline']);
+        ['for' => 'formactionid', 'class' => 'col-form-label d-inline', 'id' => 'selected-users-text']);
 $select = html_writer::select($displaylist, 'formaction', '', ['' => 'choosedots'], $selectactionparams);
 echo html_writer::tag('div', $label . $select);
 
