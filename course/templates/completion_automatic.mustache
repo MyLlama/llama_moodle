@@ -54,7 +54,9 @@
             }}title="{{.}}" {{!
             }}aria-label="{{.}}" {{!
         }}{{/accessibledescription}}>
-        <strong>{{#str}}completion_automatic:todo, core_course{{/str}}</strong> <span class="font-weight-normal">{{description}}</span>
+        
+        {{! Add an id to the span element so that it can be selected by its id to use the jQuery to change its inner text }}
+        <strong>{{#str}}completion_automatic:todo, core_course{{/str}}</strong> <span id="take-the-assessment" class="font-weight-normal">{{description}}</span>
     </span>
     {{/statusincomplete}}
 {{/istrackeduser}}
