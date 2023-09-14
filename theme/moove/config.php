@@ -180,6 +180,10 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->iconsystem = \core\output\icon_system::FONTAWESOME;
 $THEME->haseditswitch = true;
 $THEME->usescourseindex = true;
+#To load the js files in your header:
+$THEME->javascripts = array(
+    'JQuery'
+);
 // By default, all Moodle theme do not need their titles displayed.
 $THEME->activityheaderconfig = [
     'notitle' => true
