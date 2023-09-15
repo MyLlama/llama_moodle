@@ -27,11 +27,18 @@ function loadScript(url, callback) {
 loadScript("https://code.jquery.com/jquery-3.6.0.min.js", function () {
   // jQuery-dependent code can be placed here
   $(function () {
+    const page = $("#page");
+    if (
+      page.hasClass("show-drawer-right") ||
+      page.hasClass("show-drawer-left")
+    ) {
+      $(".custom-footer").addClass("adjust-footer");
+    }
+
     // Add a click event handler to the button
     $(".btn.icon-no-margin").on("click", function () {
       // Add the desired class to the footer with class "custom-footer"
       $(".custom-footer").addClass("adjust-footer");
-      console.log("Tell me if this is working!");
     });
   });
   // Function to change the text "Receive a grade" to "Take the assessment"
@@ -45,7 +52,6 @@ loadScript("https://code.jquery.com/jquery-3.6.0.min.js", function () {
     $(".btn.drawertoggle.icon-no-margin").on("click", function () {
       // remove the class from the footer which was added with class "custom-footer"
       $(".custom-footer").removeClass("adjust-footer");
-      console.log("Let me know if this is working!");
     });
   });
 });
